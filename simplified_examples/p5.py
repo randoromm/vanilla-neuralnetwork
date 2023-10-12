@@ -64,7 +64,7 @@ Shape Explanation:
 '''
 X, y = spiral_data(samples=100, classes=3)
 print(f"X shape: {X.shape}, y shape: {y.shape}")
-dense1 = Layer_Dense(2, 3)
+dense1 = Layer_Dense(2, 5)
 activation1 = Activation_ReLU()
 dense2 = Layer_Dense(3, 3)
 activation2 = None
@@ -75,3 +75,5 @@ dense1.forward(X)
 print(f"Dense1 output shape: {dense1.output.shape}")
 activation1.forward(dense1.output)
 print(f"Activation1 output shape: {dense1.output.shape}")
+
+print(activation1.output)

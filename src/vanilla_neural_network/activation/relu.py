@@ -1,9 +1,10 @@
 import numpy as np
 
 
-class ReLu:
+class ReLU:
     """
-    This module is for applying ReLu Activation function on an input and storing an output in the object.
+    This module is for applying Rectified Linear Unit (ReLU) Activation function on an input and storing an
+    output in the object.
     """
     def __init__(self):
         """
