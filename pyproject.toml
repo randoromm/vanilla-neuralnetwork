@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vanilla_neural_network"
+version = "0.0.1"
+authors = [
+  { name="Russo", email="r.rommot@gmail.com" },
+]
+description = "A simple vanilla python & numpy package for classification neural network"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/randoromm/vanilla-neuralnetwork"
+"Bug Tracker" = "https://github.com/randoromm/vanilla-neuralnetwork/issues"
