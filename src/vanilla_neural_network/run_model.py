@@ -3,6 +3,7 @@ from nnfs.datasets import spiral_data
 
 from layer.dense import Dense
 from activation.relu import ReLU
+from activation.softmax import Softmax
 
 
 def run():
@@ -33,7 +34,7 @@ def run():
     dense1 = Dense(2, 3)
     activation1 = ReLU()
     dense2 = Dense(3, 3)
-    activation2 = None
+    activation2 = Softmax()
     loss_function = None
 
     print(f"Dense1 weights shape: {dense1.weights.shape}, dense1 biases shape: {dense1.weights.shape}")
@@ -41,6 +42,10 @@ def run():
     print(f"Dense1 output shape: {dense1.output.shape}")
     activation1.forward(dense1.output)
     print(f"Activation1 output shape: {dense1.output.shape}")
+    dense2.forward(activation1.output)
+    activation2.forward(dense2.output)
+
+    print(f"Softmax output first 5:\n{activation2.output[:5]}")
 
 
 if __name__ == "__main__":
