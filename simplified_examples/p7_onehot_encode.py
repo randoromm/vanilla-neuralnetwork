@@ -20,3 +20,7 @@ print(f"Full equation: {loss}")
 loss = -(math.log(softmax_output[0]))
 
 print(f"Simplified equation: {loss}")
+print()
+print(f"0.7 loss: {-(math.log(0.7))}")
+print("As the prediction confidence goes lower the loss goes higher:")
+print(f"0.5 loss: {-(math.log(0.5))}")
