@@ -4,6 +4,7 @@ from nnfs.datasets import spiral_data
 from layer.dense import Dense
 from activation.relu import ReLU
 from activation.softmax import Softmax
+from loss.categoricalLossEntropy import CategoricalLossEntropy
 
 
 def run():
@@ -35,7 +36,7 @@ def run():
     activation1 = ReLU()
     dense2 = Dense(3, 3)
     activation2 = Softmax()
-    loss_function = None
+    loss_function = CategoricalLossEntropy()
 
     print(f"Dense1 weights shape: {dense1.weights.shape}, dense1 biases shape: {dense1.weights.shape}")
     dense1.forward(X)
@@ -46,6 +47,8 @@ def run():
     activation2.forward(dense2.output)
 
     print(f"Softmax output first 5:\n{activation2.output[:5]}")
+    loss = loss_function.calculate(activation2.output, y)
+    print("Mean loss:", loss)
 
 
 if __name__ == "__main__":
